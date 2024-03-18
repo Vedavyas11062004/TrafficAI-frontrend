@@ -9,16 +9,30 @@ import IconSet from "../assets/IconSet.svg";
 export default function LandingPage() {
   const data = [
     {
-      heading: "Number of cases",
+      heading: "Number of fines",
       value: "721",
       percentage: "11.1%",
       imageUrl: IconSet,
-      colour :"#e3f5ff",
+      colour: "#e3f5ff",
     },
     {
-      heading: "Number of cases",
-      value: "721",
-      percentage: "11.1%",
+      heading: "Number of fines cleared",
+      value: "521",
+      percentage: "8.2%",
+      imageUrl: IconSet,
+      colour: "#E5ECF6",
+    },
+    {
+      heading: "Number of Pending fines",
+      value: "200",
+      percentage: "5.1%",
+      imageUrl: IconSet,
+      colour: "#e3f5ff",
+    },
+    {
+      heading: "Area with more fines",
+      value: "Hazrtganj",
+      percentage: "9.1%",
       imageUrl: IconSet,
       colour: "#E5ECF6",
     },

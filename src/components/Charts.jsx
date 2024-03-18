@@ -15,10 +15,10 @@ export default function Charts() {
     chartRef.current = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
         datasets: [
           {
-            label: "# of Votes",
+            label: "Number of Fines",
             data: [12, 19, 3, 5, 2, 3],
             borderWidth: 1,
           },

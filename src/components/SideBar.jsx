@@ -16,8 +16,11 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import { Dashboard } from "@mui/icons-material";
+import { MapSharp } from "@mui/icons-material";
+import { AccountBalance } from "@mui/icons-material";
+import { Settings } from "@mui/icons-material";
+import { Logout } from "@mui/icons-material";
 
 const drawerWidth = 240;
 
@@ -132,7 +135,7 @@ export default function SideBar() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          {["Dashboard", "Maps"].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
@@ -148,7 +151,11 @@ export default function SideBar() {
                     justifyContent: "center",
                   }}
                 >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index === 0 ? (
+                    <Dashboard />
+                  ) : (
+                    <MapSharp />
+                  )}
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
@@ -157,7 +164,7 @@ export default function SideBar() {
         </List>
         <Divider />
         <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
+          {["Profile", "Settings", "Logout"].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
@@ -173,7 +180,13 @@ export default function SideBar() {
                     justifyContent: "center",
                   }}
                 >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index === 0 ? (
+                    <AccountBalance />
+                  ) : index === 1 ? (
+                    <Settings />
+                  ) : (
+                    <Logout />
+                  )}
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>

@@ -15,11 +15,11 @@ export default function PieChart() {
     chartRef.current = new Chart(ctx, {
       type: "doughnut",
       data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: ["Hazratganj", "Gomti nagar", "Aliganj", "Golf city", "Aminabad"],
         datasets: [
           {
-            label: "# of Votes",
-            data: [12, 19, 3, 5, 2, 3],
+            label: "# of fines",
+            data: [12, 19, 3, 5, 2],
             borderWidth: 1,
           },
         ],
@@ -33,7 +33,7 @@ export default function PieChart() {
           },
           title: {
             display: true,
-            text: "Chart.js Doughnut Chart",
+            text: "Areawise Distribution",
           },
         },
       },
