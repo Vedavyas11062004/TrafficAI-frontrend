@@ -1,0 +1,9 @@
+.pieChart,
+.charts {
+  width: 550px;
+  height: 430px;
+  background-color: #f7f9fb;
+  padding: 25px;
+  border-radius: 10px;
+  /* border: 0.05px solid black; */
+}

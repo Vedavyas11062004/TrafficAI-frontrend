@@ -1,0 +1,31 @@
+.widgetStyles {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  padding-block: 10px;
+  padding-inline: 20px;
+  align-items: flex-start;
+  border-radius: 10px;
+}
+.widgetStyles > span {
+  font-size: 18px;
+  font-weight: 300;
+}
+.valueContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top:10px;
+  align-items: center;
+}
+.valueContainer > p {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0%;
+}
+.valueContainer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}

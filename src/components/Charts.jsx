@@ -1,5 +1,6 @@
 import Chart from "chart.js/auto";
 import { useEffect, useRef } from "react";
+import "../styles/piechart.css";
 
 export default function Charts() {
   const chartRef = useRef(null);
@@ -41,7 +42,7 @@ export default function Charts() {
   }, []);
 
   return (
-    <div style={{ width: "500px", marginLeft: "150px", height: "500px" }}>
+    <div style={{ width: "500px", height: "400px" }} className="charts">
       <canvas id="myChart"></canvas>
     </div>
   );

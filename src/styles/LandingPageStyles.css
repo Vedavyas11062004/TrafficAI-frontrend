@@ -1,4 +1,15 @@
+.chartsContainer {
+  display: flex;
+  gap: 50px;
+}
+
+.widgets {
+  margin-left: 100px;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 20px;
+}
+
 .chartsContainer{
-    display: flex;
-    gap: 50px;
+    margin-left: 100px;
 }
