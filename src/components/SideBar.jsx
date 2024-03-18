@@ -152,9 +152,9 @@ export default function SideBar() {
                   }}
                 >
                   {index === 0 ? (
-                    <Dashboard />
+                    <Dashboard  onClick={() => window.location.href = '/'}/>
                   ) : (
-                    <MapSharp />
+                    <MapSharp onClick={() => window.location.href = '/maps'}/>
                   )}
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />

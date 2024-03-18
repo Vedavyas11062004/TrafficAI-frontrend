@@ -1,6 +1,13 @@
 import React from "react";
 import L from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  CircleMarker,
+  Tooltip,
+} from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import pointer from "../assets/pointers.svg";
 
@@ -12,9 +19,9 @@ function MapComponent() {
   });
   return (
     <MapContainer
-      center={[51.505, -0.09]}
+      center={[26.8467, 80.9462]}
       zoom={13}
-      style={{ height: "400px", width: "60%",marginLeft:"120px" }}
+      style={{ height: "600px", width: "88%", marginLeft: "120px" }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -26,6 +33,27 @@ function MapComponent() {
           A pretty CSS3 popup. <br /> Easily customizable.
         </Popup>
       </Marker>
+      <CircleMarker
+        center={[26.8506, 81.0]}
+        pathOptions={{ color: "green" }}
+        radius={40}
+      >
+        <Tooltip>Low Traffic</Tooltip>
+      </CircleMarker>
+      <CircleMarker
+        center={[26.847642, 80.9257312]}
+        pathOptions={{ color: "red" }}
+        radius={40}
+      >
+        <Tooltip>High Traffic</Tooltip>
+      </CircleMarker>
+      <CircleMarker
+        center={[26.867062, 80.9033341]}
+        pathOptions={{ color: "red" }}
+        radius={40}
+      >
+        <Tooltip>High Traffic</Tooltip>
+      </CircleMarker>
     </MapContainer>
   );
 }
